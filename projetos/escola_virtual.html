@@ -1,0 +1,124 @@
+ <!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		 <title>ESCOLA VIRTUAL </title>
+		 <meta charset="utf-8">
+	</head>
+	<body>
+
+	  	<h2 style="text-align:center;">ESCOLA VIRTUAL </h2>
+	  
+		<h4 style="text-align:center;">Formulário de Pré-matricula </h4>
+  
+		<hr>
+
+		<form name="form1">
+			<fieldset>
+			  
+			  	<p> Nome do aluno:
+		  			<input type="text" name="tnome" alt="Nome do aluno">
+		  		</p>
+			  
+			  	<p> Data de nascimento:
+		  			<input type="date" name="tnasc" alt="Data de nascimento">
+		  		</p>
+			  
+			  	<p> Mãe: 
+		  			<input type="text" name="tmae" alt="Mãe">
+			  	</p>
+			  
+			  	<p>Pai: 
+		  			<input type="text" name="tpai" alt="Pai">
+			  	</p>
+			  
+			  	<p> Fone:
+		  			<input type="number" name="tfone" alt="Fone">
+			    </p> 
+			  
+				<p> E-mail:
+		  			<input type="email" name="temail" alt="E-mail">
+			    </p>
+					
+
+			</fieldset>
+			
+			<fieldset>
+				<h4>Dados da matrícula</h4>
+			
+				<p> Série:</p>
+				<select> 
+			    <option>Educ. Infantil</option>
+					<option>	Ensino Fund. I</option>
+					<option>Ensinoon>Ensino Fund. II</option>
+					<option>	Ensino Médio</option>
+						<option>Eduction>Educ. Profissional</option>
+			    </select>
+			    <br>
+		   
+			  	<p> Turno:  </p>
+			  
+				<input type="radio" name="turno" > Manhã
+				<input type="radio" name="turno" > Tarde
+
+				<input type="radio" name="turno" > Noite
+				<br>
+				
+				<p>Atividades Extracurriculares: </p>
+					
+				<input type="checkbox" name=""> Informática
+
+			    <input type="checkbox" name=""> Espanhol
+
+				<input type="checkbox" name=""> Dança 
+							
+				<input type="checkbox" name=""> Futebol
+
+				<input type="checkbox" name=""> Violão
+
+			</fieldset>
+						
+			<button type="submit">Enviar </button>
+		</form>
+
+		<script type="text/javascript">
+			
+			// Criamos uma variável chamada input, pegamos o valor do elemento no mundo html usando o comando querySelector
+			
+			var listaInput = [document.querySelector("input[name = 'tnome']"),
+							  document.querySelector("input[name='tnasc']"),
+							  document.querySelector("input[name='tmae']"),
+							  document.querySelector("input[name='tpai']"),
+							  document.querySelector("input[name='tfone']"),
+							  document.querySelector("input[name='temail']")
+							 ];
+
+			var contador = 0;
+
+			var quantidade = listaInput.length;
+
+
+			function verifica(){
+				
+				//enquanto a cndição for verdadeira, realiza o laço
+				while (contador < quantidade) {
+				
+					if (listaInput[contador].value == ""){
+						
+						alert(listaInput[contador].alt+" é de preenchimento obrigatório!");
+					}	
+
+					contador++;
+	
+				}
+
+			}
+		
+			// criamos uma variável chamada button	que recebe 
+			var button = document.querySelector("button");
+
+			button.onclick = verifica;
+
+
+		</script>
+	</body>
+</html>

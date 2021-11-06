@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<section>
+			<input type="text" name="usuario" placeholder="Digite o usuário">
+			<br>
+			<input type="password" name="senha" placeholder="Digite sua senha">
+			<button>Entrar</button>
+		</section>
+	</body>
+
+	<script type="text/javascript">
+
+		var inputUsuario = document.querySelector("input[name='usuario']");
+		
+		//aula 2
+		var inputSenha = document.querySelector("input[name='senha']");
+
+
+		var botao = document.querySelector("button");
+
+
+		function mostrar(){
+			//aula 2
+			//verificação campo de usuário preenchido.
+			if (inputUsuario.value == "") {
+				alert('Insira um usuário!');
+				inputUsuario.focus();
+			}
+
+			//aula 2
+			//verificando se o campo de senha está preenchido
+			if (inputSenha.value == "") {
+				alert('Insira uma senha!');
+				inputSenha.focus();
+			}
+
+		}
+
+		botao.onclick = mostrar;
+
+		
+
+	</script>
+
+</html>
